@@ -5,28 +5,28 @@ body {
 
 .answer-container {
     display: flex;
-    margin-bottom: 0.8rem;
+    margin-bottom: 12px;
     width: 100%;
     border-radius: 4px;
     background: #f45000;
-    font-size: 3rem;
-    min-width: 80rem;
+    font-size: 48px;
+    min-width: 1280px;
 }
 
 .answer-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    box-shadow: 0 6px 22.4px 0 rgba(6, 103, 247, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
 
 .answer-prefix {
-    padding: 2rem 2.5rem;
+    padding: 32px 40px;
     color: white;
 }
 
 .answer-text {
-    padding: 2rem;
+    padding: 32px;
     width: 100%;
 }
 
@@ -38,7 +38,6 @@ body {
     background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
 }
 
-/* Heads up Display */
 #hud {
     display: flex;
     justify-content: space-between;
@@ -54,23 +53,23 @@ body {
 }
 
 #progBar {
-    width: 20rem;
-    height: 3rem;
-    border: 0.2rem solid rgb(11,223,36);
-    margin-top: 2rem;
+    width: 320px;
+    height: 48px;
+    border: 3px solid #0bdf24;
+    margin-top: 32px;
     border-radius: 50px;
     overflow: hidden;
 }
 
 #progBarFull {
     height: 100%;
-    background: rgb(11,223,36);
+    background: #0bdf24;
     width: 0%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1920px) {
     .answer
--container {
-        min-width: 40rem;
+    container {
+        min-width: 600px;
     }
 }

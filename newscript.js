@@ -4,13 +4,16 @@ const progText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#scoreText');
 const progBarFull = document.querySelector('#progressBarFull');
 
-let currentQuestion = {}
-let accceptingAnswers = true
-let score = 0
-let questionCounter = 0
-let availableQuestions = []
+let currentQuestion = {};
+let acceptingAnswers = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
+let questions = [];
+let questionsIndex = -1;
+let submittedAnswers = {};
 
-fetch ('.questions.json')
+fetch ('./questions.json')
 .then (res => {
     return res.json();
 })
@@ -40,8 +43,8 @@ getNewQuestion = () => {
     }
 
     questionCounter++
-    progressText.innerText = `questions ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    progText.innerText = `questions ${questionCounter} of ${MAX_QUESTIONS}`
+    progBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
