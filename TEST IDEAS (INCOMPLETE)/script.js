@@ -1,4 +1,4 @@
-// QUESTIONS 
+// VERY BASIC FIRST ATTEMPT
 
 const Questions =[
     {
